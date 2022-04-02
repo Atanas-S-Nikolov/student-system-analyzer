@@ -73,7 +73,7 @@ public interface TestUtils {
 
     Mode DEFAULT_MODE = new Mode();
 
-    Map<String, Integer> DEFAULT_ACTIVITIES_COMPONENT_INFO = new TreeMap<String, Integer>() {
+    Map<String, Integer> DEFAULT_ACTIVITIES_DESCRIPTION_INFO = new TreeMap<String, Integer>() {
         {
             put(TEST_VALUE, 2);
             put(TEST_VALUE_2, 1);
@@ -88,7 +88,7 @@ public interface TestUtils {
         }
     };
 
-    Map<String, Integer> TEST_ACTIVITIES_COMPONENT_INFO = new TreeMap<String, Integer>() {
+    Map<String, Integer> TEST_ACTIVITIES_DESCRIPTION_INFO = new TreeMap<String, Integer>() {
         {
             put(TEST_VALUE, 3);
             put(TEST_VALUE_2, 2);
@@ -103,7 +103,7 @@ public interface TestUtils {
         }
     };
 
-    int COUNT_OF_OBJECTS_TO_ANALYZE = DEFAULT_ACTIVITIES_COMPONENT_INFO.values().stream().mapToInt(Integer::valueOf).sum();
-    FrequencyDistributionCalculator DEFAULT_FREQUENCY_DISTRIBUTION_CALCULATOR = new FrequencyDistributionCalculator(DEFAULT_ACTIVITIES_COMPONENT_INFO, COUNT_OF_OBJECTS_TO_ANALYZE);
-    FrequencyDistributionCalculator TEST_FREQUENCY_DISTRIBUTION_CALCULATOR = new FrequencyDistributionCalculator(DEFAULT_ACTIVITIES_COMPONENT_INFO, 1);
+    int COUNT_OF_OBJECTS_TO_ANALYZE = DEFAULT_ACTIVITIES_DESCRIPTION_INFO.values().stream().mapToInt(Integer::valueOf).sum();
+    FrequencyDistributionCalculator DEFAULT_FREQUENCY_DISTRIBUTION_CALCULATOR = new FrequencyDistributionCalculator(DEFAULT_ACTIVITIES_DESCRIPTION_INFO, COUNT_OF_OBJECTS_TO_ANALYZE);
+    FrequencyDistributionCalculator TEST_FREQUENCY_DISTRIBUTION_CALCULATOR = new FrequencyDistributionCalculator(DEFAULT_ACTIVITIES_DESCRIPTION_INFO, 1);
 }

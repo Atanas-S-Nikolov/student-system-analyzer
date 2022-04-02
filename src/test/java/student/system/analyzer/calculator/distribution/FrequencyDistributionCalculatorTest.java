@@ -17,7 +17,7 @@ import java.util.List;
 
 import static student.system.analyzer.test.util.TestUtils.COUNT_OF_OBJECTS_TO_ANALYZE;
 import static student.system.analyzer.test.util.TestUtils.DEFAULT_ABSOLUTE_FREQUENCY;
-import static student.system.analyzer.test.util.TestUtils.DEFAULT_ACTIVITIES_COMPONENT_INFO;
+import static student.system.analyzer.test.util.TestUtils.DEFAULT_ACTIVITIES_DESCRIPTION_INFO;
 import static student.system.analyzer.test.util.TestUtils.DEFAULT_FREQUENCY_DISTRIBUTION_CALCULATOR;
 import static student.system.analyzer.test.util.TestUtils.TEST_FREQUENCY_DISTRIBUTION_CALCULATOR;
 
@@ -77,7 +77,7 @@ class FrequencyDistributionCalculatorTest {
     private Collection<FrequencyDistribution> buildDistributions() {
         List<FrequencyDistribution> distributions = new ArrayList<>();
 
-        DEFAULT_ACTIVITIES_COMPONENT_INFO.forEach((key, value) ->
+        DEFAULT_ACTIVITIES_DESCRIPTION_INFO.forEach((key, value) ->
                 distributions.add(new FrequencyDistribution(key, value, (double) value / COUNT_OF_OBJECTS_TO_ANALYZE)));
 
         return distributions.stream()

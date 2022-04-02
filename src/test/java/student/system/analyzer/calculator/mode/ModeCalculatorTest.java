@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import student.system.analyzer.calculator.ICalculator;
 
-import static student.system.analyzer.test.util.TestUtils.DEFAULT_ACTIVITIES_COMPONENT_INFO;
-import static student.system.analyzer.test.util.TestUtils.TEST_ACTIVITIES_COMPONENT_INFO;
+import static student.system.analyzer.test.util.TestUtils.DEFAULT_ACTIVITIES_DESCRIPTION_INFO;
+import static student.system.analyzer.test.util.TestUtils.TEST_ACTIVITIES_DESCRIPTION_INFO;
 import static student.system.analyzer.test.util.TestUtils.TEST_VALUE_4;
 import static student.system.analyzer.test.util.TestUtils.TEST_VALUE_6;
 import static student.system.analyzer.test.util.TestUtils.TEST_VALUE_9;
@@ -21,7 +21,7 @@ class ModeCalculatorTest {
 
     @BeforeEach
     void setUp() {
-        classUnderTest = new ModeCalculator(DEFAULT_ACTIVITIES_COMPONENT_INFO);
+        classUnderTest = new ModeCalculator(DEFAULT_ACTIVITIES_DESCRIPTION_INFO);
     }
 
     @Test
@@ -32,7 +32,7 @@ class ModeCalculatorTest {
 
     @Test
     public void givenActivitiesInfo_whenCalculateMethodIsCalled_thenMoreThanOneValueForModeIsReturned() {
-        classUnderTest = new ModeCalculator(TEST_ACTIVITIES_COMPONENT_INFO);
+        classUnderTest = new ModeCalculator(TEST_ACTIVITIES_DESCRIPTION_INFO);
 
         assertThat(classUnderTest.calculate(), hasSize(3));
         assertThat(classUnderTest.calculate(), containsInAnyOrder(TEST_VALUE_4, TEST_VALUE_6, TEST_VALUE_9));
