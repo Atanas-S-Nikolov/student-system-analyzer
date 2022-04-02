@@ -12,8 +12,8 @@ import java.util.Map;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
-import static student.system.analyzer.message.FrequencyDistributionMessages.CALCULATE_ABSOLUTE_FREQUENCY_DISTRIBUTION_ERROR_MESSAGE;
-import static student.system.analyzer.message.FrequencyDistributionMessages.CALCULATE_RELATIVE_FREQUENCY_DISTRIBUTION_ERROR_MESSAGE;
+import static student.system.analyzer.message.ErrorMessages.CALCULATE_ABSOLUTE_FREQUENCY_DISTRIBUTION_ERROR_MESSAGE;
+import static student.system.analyzer.message.ErrorMessages.CALCULATE_RELATIVE_FREQUENCY_DISTRIBUTION_ERROR_MESSAGE;
 
 public class FrequencyDistributionCalculator implements ICalculator {
 

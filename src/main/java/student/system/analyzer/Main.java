@@ -5,7 +5,6 @@ import student.system.analyzer.calculator.distribution.FrequencyDistributionCalc
 import student.system.analyzer.calculator.mode.ModeCalculator;
 import student.system.analyzer.calculator.ICalculator;
 import student.system.analyzer.exception.distribution.FrequencyDistributionCalculationException;
-import student.system.analyzer.util.InputFileReader;
 import student.system.analyzer.model.StudentActivity;
 
 import java.util.Collection;
@@ -15,9 +14,12 @@ import java.util.Scanner;
 import java.util.Set;
 
 import static student.system.analyzer.message.CommandMessages.COMMANDS_DESCRIPTION;
+import static student.system.analyzer.message.CommandMessages.CSV_FILE_PATH_INPUT_MESSAGE;
 import static student.system.analyzer.message.CommandMessages.DISPERSION_COMMAND;
 import static student.system.analyzer.message.CommandMessages.FREQUENCY_DISTRIBUTION_COMMAND;
 import static student.system.analyzer.message.CommandMessages.MODE_COMMAND;
+import static student.system.analyzer.message.ErrorMessages.INTERNAL_SERVER_ERROR;
+import static student.system.analyzer.util.InputFileReader.readCsvFile;
 import static student.system.analyzer.util.StudentActivityUtils.filterStudentActivities;
 import static student.system.analyzer.util.StudentActivityUtils.getActivityDescriptionInfo;
 
@@ -30,11 +32,17 @@ public class Main {
     }
 
     private static void start() {
-        System.out.println(COMMANDS_DESCRIPTION);
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println(CSV_FILE_PATH_INPUT_MESSAGE);
+        String csvFilePath = scanner.nextLine();
+
+        Collection<StudentActivity> studentActivities = readCsvFile(csvFilePath);
+
+        System.out.println(COMMANDS_DESCRIPTION);
         String command = scanner.nextLine();
 
-        Collection<StudentActivity> filteredStudentActivities = filterStudentActivities(InputFileReader.readCsvFile());
+        Collection<StudentActivity> filteredStudentActivities = filterStudentActivities(studentActivities);
         Map<String, Integer> activityDescriptionInfo = getActivityDescriptionInfo(filteredStudentActivities);
         double countOfObjectsToAnalyze = filteredStudentActivities.size();
 
@@ -66,7 +74,8 @@ public class Main {
         } catch (FrequencyDistributionCalculationException e) {
             e.printStackTrace();
         } catch (NullPointerException npe) {
-            System.out.println("Internal error occurred!");
+            System.out.println(INTERNAL_SERVER_ERROR);
+            System.exit(-1);
         }
         return result;
     }

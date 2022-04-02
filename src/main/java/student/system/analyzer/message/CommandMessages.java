@@ -2,6 +2,8 @@ package student.system.analyzer.message;
 
 public interface CommandMessages {
 
+    String CSV_FILE_PATH_INPUT_MESSAGE = "Enter csv file path:";
+
     String FREQUENCY_DISTRIBUTION_COMMAND = "fd";
     String MODE_COMMAND = "mode";
     String DISPERSION_COMMAND = "disp";
