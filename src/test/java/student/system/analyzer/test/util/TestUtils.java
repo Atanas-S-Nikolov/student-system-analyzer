@@ -63,7 +63,7 @@ public interface TestUtils {
     int DEFAULT_ABSOLUTE_FREQUENCY = 1;
     double DEFAULT_RELATIVE_FREQUENCY = 1.0;
 
-    String TEST_USER_ID = "default user id";
+    String TEST_USER_ID = "test user id";
     int TEST_ABSOLUTE_FREQUENCY = 2;
     double TEST_RELATIVE_FREQUENCY = 2.0;
 
@@ -137,4 +137,19 @@ public interface TestUtils {
     StudentActivity TEST_ACTIVITY_9 = new StudentActivity("22/02/21, 00:00", "Assignment: Качване на курсови задачи и проекти", "File submissions",
             "A file has been uploaded.", "The user with id '8421' has uploaded a file to the submission with id '22715' in the assignment activity with course module id '4717'.");
     StudentActivity COLUMN_TITLES_ACTIVITY = new StudentActivity(TIME_CONTEXT_COLUMN_TITLE, EVENT_CONTEXT_COLUMN_TITLE, COMPONENT_COLUMN_TITLE, EVENT_NAME_COLUMN_TITLE, DESCRIPTION_COLUMN_TITLE);
+
+    FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_1 = new FrequencyDistribution("1", 3, 0.25);
+    FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_2 = new FrequencyDistribution("2", 2, 0.16);
+    FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_3 = new FrequencyDistribution("3", 1, 0.08);
+    FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_4 = new FrequencyDistribution("4", 5, 0.42);
+    FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_5 = new FrequencyDistribution("5", 1, 0.08);
+    List<FrequencyDistribution> TEST_DISTRIBUTIONS = Arrays.asList(TEST_FREQUENCY_DISTRIBUTION_1, TEST_FREQUENCY_DISTRIBUTION_2, TEST_FREQUENCY_DISTRIBUTION_3, TEST_FREQUENCY_DISTRIBUTION_4, TEST_FREQUENCY_DISTRIBUTION_5);
+
+    FrequencyDistribution INCORRECT_TEST_FREQUENCY_DISTRIBUTION_1 = new FrequencyDistribution("1", 3, 0.3);
+    FrequencyDistribution INCORRECT_TEST_FREQUENCY_DISTRIBUTION_2 = new FrequencyDistribution("2", 8, 0.1);
+    FrequencyDistribution INCORRECT_TEST_FREQUENCY_DISTRIBUTION_3 = new FrequencyDistribution("3", 1, 0.8);
+    FrequencyDistribution INCORRECT_TEST_FREQUENCY_DISTRIBUTION_4 = new FrequencyDistribution("4", 5, 0.4);
+    FrequencyDistribution INCORRECT_TEST_FREQUENCY_DISTRIBUTION_5 = new FrequencyDistribution("5", 1, 0.1);
+    List<FrequencyDistribution> INCORRECT_TEST_DISTRIBUTIONS = Arrays.asList(INCORRECT_TEST_FREQUENCY_DISTRIBUTION_1, INCORRECT_TEST_FREQUENCY_DISTRIBUTION_2, INCORRECT_TEST_FREQUENCY_DISTRIBUTION_3, INCORRECT_TEST_FREQUENCY_DISTRIBUTION_4, INCORRECT_TEST_FREQUENCY_DISTRIBUTION_5);
+
 }

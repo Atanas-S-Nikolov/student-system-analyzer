@@ -18,6 +18,7 @@ import static student.system.analyzer.message.CommandMessages.CSV_FILE_PATH_INPU
 import static student.system.analyzer.message.CommandMessages.DISPERSION_COMMAND;
 import static student.system.analyzer.message.CommandMessages.FREQUENCY_DISTRIBUTION_COMMAND;
 import static student.system.analyzer.message.CommandMessages.MODE_COMMAND;
+import static student.system.analyzer.message.Constants.UNRECOGNIZED_COMMAND_MESSAGE;
 import static student.system.analyzer.message.ErrorMessages.INTERNAL_SERVER_ERROR;
 import static student.system.analyzer.util.InputFileReader.readCsvFile;
 import static student.system.analyzer.util.StudentActivityUtils.filterStudentActivities;
@@ -64,7 +65,7 @@ public class Main {
                 calculator = new DispersionCalculator(idsInts);
                 break;
             default:
-                System.out.println("Unrecognized command!");
+                System.out.println(UNRECOGNIZED_COMMAND_MESSAGE);
                 System.exit(-1);
         }
 

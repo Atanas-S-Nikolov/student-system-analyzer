@@ -6,4 +6,5 @@ public interface Constants {
     String COMPONENT_COLUMN_TITLE = "Component";
     String EVENT_NAME_COLUMN_TITLE = "Event name";
     String DESCRIPTION_COLUMN_TITLE = "Description";
+    String UNRECOGNIZED_COMMAND_MESSAGE = "Unrecognized command!";
 }
