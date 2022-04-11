@@ -52,13 +52,13 @@ class StudentActivityTest {
     }
 
     @Test
-    public void givenSameObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenSameObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         assertThat(classUnderTest, is(expectedStudentActivity));
         assertThat(classUnderTest.hashCode(), is(expectedStudentActivity.hashCode()));
     }
 
     @Test
-    public void givenDifferentObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenDifferentObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         expectedStudentActivity = new StudentActivity(TEST_TIME, TEST_EVENT_CONTEXT, TEST_COMPONENT, TEST_EVENT_NAME, TEST_DESCRIPTION);
         assertThat(classUnderTest, is(not(expectedStudentActivity)));
         assertThat(classUnderTest.hashCode(), is(not(expectedStudentActivity.hashCode())));

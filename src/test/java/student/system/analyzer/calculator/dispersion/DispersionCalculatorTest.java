@@ -2,6 +2,7 @@ package student.system.analyzer.calculator.dispersion;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import student.system.analyzer.calculator.ICalculator;
 
 import java.util.Arrays;
 
@@ -12,7 +13,7 @@ class DispersionCalculatorTest {
 
     private static final int[] VALUES = new int[] {1, 2, 3, 4, 5, 6};
     private double expectedDispersion;
-    private DispersionCalculator classUnderTest;
+    private ICalculator classUnderTest;
 
     @BeforeEach
     void setUp() {

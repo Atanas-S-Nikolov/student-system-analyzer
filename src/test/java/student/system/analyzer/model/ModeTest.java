@@ -53,14 +53,14 @@ class ModeTest {
     }
 
     @Test
-    public void givenSameObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenSameObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         classUnderTest = expectedMode;
         assertThat(classUnderTest, is(expectedMode));
         assertThat(classUnderTest.hashCode(), is(expectedMode.hashCode()));
     }
 
     @Test
-    public void givenDifferentObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenDifferentObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         assertThat(classUnderTest, is(not(expectedMode)));
         assertThat(classUnderTest.hashCode(), is(not(expectedMode.hashCode())));
     }

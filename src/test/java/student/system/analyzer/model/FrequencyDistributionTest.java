@@ -46,13 +46,13 @@ class FrequencyDistributionTest {
     }
 
     @Test
-    public void givenSameObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenSameObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         assertThat(classUnderTest, is(expectedFrequencyDistribution));
         assertThat(classUnderTest.hashCode(), is(expectedFrequencyDistribution.hashCode()));
     }
 
     @Test
-    public void givenDifferentObjects_whenToEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
+    public void givenDifferentObjects_whenEqualsAndHashCodeAreCalled_thenCorrectResultIsReturned() {
         expectedFrequencyDistribution = new FrequencyDistribution(TEST_USER_ID, TEST_ABSOLUTE_FREQUENCY, TEST_RELATIVE_FREQUENCY);
         assertThat(classUnderTest, is(not(expectedFrequencyDistribution)));
         assertThat(classUnderTest.hashCode(), is(not(expectedFrequencyDistribution.hashCode())));
