@@ -55,16 +55,16 @@ public class InputFileReader {
             }
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.printf(FILE_PATH_DOES_NOT_EXIST_ERROR_MESSAGE_FORMAT, filePath);
-            System.exit(-1);
+            System.exit(0);
         } catch(Exception e) {
             System.out.println(INTERNAL_SERVER_ERROR);
-            System.exit(-1);
+            System.exit(0);
         } finally {
             try {
                 Objects.requireNonNull(reader).close();
             } catch (Exception e) {
                 System.out.println(INTERNAL_SERVER_ERROR);
-                System.exit(-1);
+                System.exit(0);
             }
         }
         return activities;

@@ -66,7 +66,7 @@ public class Main {
                 break;
             default:
                 System.out.println(UNRECOGNIZED_COMMAND_MESSAGE);
-                System.exit(-1);
+                System.exit(0);
         }
 
         Object result = new Object();
@@ -76,7 +76,7 @@ public class Main {
             e.printStackTrace();
         } catch (NullPointerException npe) {
             System.out.println(INTERNAL_SERVER_ERROR);
-            System.exit(-1);
+            System.exit(0);
         }
         return result;
     }
