@@ -16,7 +16,7 @@ public class StudentActivityUtils {
 
     public static Map<String, Integer> getActivityDescriptionInfo(Collection<StudentActivity> studentActivities) {
         Map<String, Integer> submittedUserFilesInfo = new HashMap<>();
-        Pattern pattern = Pattern.compile("user\\s+with\\s+id\\s+'([\\d]+)'");
+        Pattern pattern = Pattern.compile("user\\s+with\\s+id\\s+'(\\d+)'");
 
         for (StudentActivity studentActivity : studentActivities) {
             String description = studentActivity.getDescription();
