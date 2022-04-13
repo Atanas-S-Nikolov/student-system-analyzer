@@ -16,7 +16,7 @@ import static student.system.analyzer.message.Constants.COMPONENT_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.DESCRIPTION_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.EVENT_CONTEXT_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.EVENT_NAME_COLUMN_TITLE;
-import static student.system.analyzer.message.Constants.TIME_CONTEXT_COLUMN_TITLE;
+import static student.system.analyzer.message.Constants.TIME_COLUMN_TITLE;
 
 public interface TestUtils {
 
@@ -136,7 +136,7 @@ public interface TestUtils {
             "Course module viewed", "The user with id '8381' viewed the 'url' activity with course module id '1018'.");
     StudentActivity TEST_ACTIVITY_9 = new StudentActivity("22/02/21, 00:00", "Assignment: Качване на курсови задачи и проекти", "File submissions",
             "A file has been uploaded.", "The user with id '8421' has uploaded a file to the submission with id '22715' in the assignment activity with course module id '4717'.");
-    StudentActivity COLUMN_TITLES_ACTIVITY = new StudentActivity(TIME_CONTEXT_COLUMN_TITLE, EVENT_CONTEXT_COLUMN_TITLE, COMPONENT_COLUMN_TITLE, EVENT_NAME_COLUMN_TITLE, DESCRIPTION_COLUMN_TITLE);
+    StudentActivity COLUMN_TITLES_ACTIVITY = new StudentActivity(TIME_COLUMN_TITLE, EVENT_CONTEXT_COLUMN_TITLE, COMPONENT_COLUMN_TITLE, EVENT_NAME_COLUMN_TITLE, DESCRIPTION_COLUMN_TITLE);
 
     FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_1 = new FrequencyDistribution("1", 3, 0.25);
     FrequencyDistribution TEST_FREQUENCY_DISTRIBUTION_2 = new FrequencyDistribution("2", 2, 0.16);

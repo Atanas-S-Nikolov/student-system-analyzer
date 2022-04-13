@@ -17,7 +17,7 @@ import static student.system.analyzer.message.Constants.COMPONENT_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.DESCRIPTION_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.EVENT_CONTEXT_COLUMN_TITLE;
 import static student.system.analyzer.message.Constants.EVENT_NAME_COLUMN_TITLE;
-import static student.system.analyzer.message.Constants.TIME_CONTEXT_COLUMN_TITLE;
+import static student.system.analyzer.message.Constants.TIME_COLUMN_TITLE;
 import static student.system.analyzer.message.ErrorMessages.FILE_PATH_DOES_NOT_EXIST_ERROR_MESSAGE_FORMAT;
 import static student.system.analyzer.message.ErrorMessages.INTERNAL_SERVER_ERROR;
 
@@ -42,7 +42,7 @@ public class InputFileReader {
                 String eventName = line[3];
                 String description = line[4];
 
-                boolean timeIsValid = !time.equals(TIME_CONTEXT_COLUMN_TITLE);
+                boolean timeIsValid = !time.equals(TIME_COLUMN_TITLE);
                 boolean eventContextIsValid = !eventContext.equals(EVENT_CONTEXT_COLUMN_TITLE);
                 boolean componentIsValid = !component.equals(COMPONENT_COLUMN_TITLE);
                 boolean eventNameIsValid = !eventName.equals(EVENT_NAME_COLUMN_TITLE);
